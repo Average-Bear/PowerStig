@@ -413,10 +413,6 @@ function Get-FileContentRuleDscResource
         $Key
     )
 
-    if ($Key -match 'app.update.enabled|datareporting.policy.dataSubmissionEnabled')
-    {
-        return 'cJsonFile'
-    }
     return 'ReplaceText'
 }
 <#
