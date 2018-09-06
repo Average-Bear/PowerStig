@@ -413,7 +413,10 @@ function Get-FileContentRuleDscResource
         $Key
     )
 
-    return 'ReplaceText'
+    if ($global:stigTitle -match 'Mozilla Firefox')
+    {
+        return 'ReplaceText'
+    }
 }
 <#
     .SYNOPSIS
